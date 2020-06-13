@@ -1,0 +1,23 @@
+{
+  "name": "tripadvisor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "mailgun-js": "^0.22.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bessem75/Tripadvisor.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bessem75/Tripadvisor/issues"
+  },
+  "homepage": "https://github.com/Bessem75/Tripadvisor#readme"
+}
