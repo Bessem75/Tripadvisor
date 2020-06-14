@@ -7,6 +7,25 @@ const app = express();
 app.use(formidableMiddleware());
 app.use(cors());
 
+
+
+var API_KEY = 'YOUR_API_KEY';
+var DOMAIN = 'YOUR_DOMAIN_NAME';
+var mailgun = require('mailgun-js')({
+  apiKey: API_KEY,
+  domain: DOMAIN
+});
+
+const data = {
+  from: 'Excited User <me@samples.mailgun.org>',
+  to: 'foo@example.com, bar@example.com',
+  subject: 'Hello',
+  text: 'Testing some Mailgun awesomeness!'
+};
+
+mailgun.messages().send(data, (error, body) => {
+  console.log(body);
+});
 // Données fournies par mailgun (à mettre dans un fichier .env avant déploiement sur Heroku !!)
 const API_KEY = process.env.MAILGUN_API_KEY;
 const DOMAIN = process.env.MAILGUN_DOMAIN;
