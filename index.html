@@ -1,338 +1,297 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TripAdvisor - Reacteur</title>
-    <link rel="stylesheet" href="./assets/css/reset.css" />
-    <link rel="stylesheet" href="./assets/css/fonts.css" />
-    <link rel="stylesheet" href="./assets/css/icons.css" />
-    <link rel="stylesheet" href="./assets/css/style.css" />
 
-    <script src="assets/js/main.js"></script>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TripAdvisor - Reacteur</title>
+  <link rel="stylesheet" href="./assets/css/reset.css" />
+  <link rel="stylesheet" href="./assets/css/fonts.css" />
+  <link rel="stylesheet" href="./assets/css/icons.css" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
 
-  <body>
-    <div class="modal hidden">
-      <div class="form-container">
+  <script src="assets/js/main.js"></script>
+</head>
+
+<body>
+  <div class="modal hidden">
+    <div class="form-container">
+      <div>
+        <i class="icon-times"></i>
+        <p>Formulaire d'inscription</p>
+
+        <form id="contactForm">
+          <input type="text" name="firstname" id="firstname" placeholder="Prénom" autocomplete="off" />
+          <input type="text" name="lastname" id="lastname" placeholder="Nom" />
+          <input type="email" name="email" id="email" placeholder="Email" />
+          <input type="password" name="password" id="password" placeholder="Mot de passe" />
+          <textarea name="description" id="description" rows="5" cols="50"
+            placeholder="Décrivez-vous en quelques lignes"></textarea>
+          <input type="submit" value="Envoyer le formulaire" />
+        </form>
+      </div>
+    </div>
+  </div>
+  <header>
+    <div class="header-top">
+      <div class="container">
+        <i class="icon-menu_bars visible-xs"></i>
+        <img src="./assets/img/logo.svg" alt="logo tripadvisor" />
+        <nav>
+          <a href="#"><i class="icon-plus_c"></i><span>Publier</span></a>
+          <a href="#"><i class="icon-heart"></i><span>Voyager</span></a>
+          <a href="#"><i class="icon-comments"></i><span>Messages</span></a>
+          <a href="#"><i class="icon-friend"></i><span>Profil</span></a>
+          <button class="btn-signup">S'inscrire</button>
+        </nav>
+      </div>
+    </div>
+
+    <div class="cover">
+      <div class="transparent-strip">
+        <div class="container">
+          <ul>
+            <li><a href="#">Europe</a></li>
+            <li><i class="icon-single_chevron_right"></i></li>
+            <li><a href="#">France</a></li>
+            <li><i class="icon-single_chevron_right"></i></li>
+            <li><a href="#">Île de France</a></li>
+            <li><i class="icon-single_chevron_right"></i></li>
+            <li><a href="#">Paris</a></li>
+            <li><i class="icon-caret_down"></i></li>
+          </ul>
+          <div><span>Visiter :</span><span>&nbspParis</span></div>
+        </div>
+      </div>
+      <div class="title">
         <div>
-          <i class="icon-times"></i>
-          <p>Formulaire d'inscription</p>
-
-          <form id="contactForm">
-            <input
-              type="text"
-              name="firstname"
-              id="firstname"
-              placeholder="Prénom"
-              autocomplete="off"
-            />
-            <input
-              type="text"
-              name="lastname"
-              id="lastname"
-              placeholder="Nom"
-            />
-            <input type="email" name="email" id="email" placeholder="Email" />
-            <input
-              type="password"
-              name="password"
-              id="password"
-              placeholder="Mot de passe"
-            />
-            <textarea
-              name="description"
-              id="description"
-              rows="5"
-              cols="50"
-              placeholder="Décrivez-vous en quelques lignes"
-            ></textarea>
-            <input type="submit" value="Envoyer le formulaire" />
-          </form>
+          <div>
+            <h1>Paris</h1>
+            <i class="icon-single_chevron_down"></i>
+          </div>
+          <div><i class="icon-times"></i></div>
         </div>
       </div>
     </div>
-    <header>
-      <div class="header-top">
-        <div class="container">
-          <i class="icon-menu_bars visible-xs"></i>
-          <img src="./assets/img/logo.svg" alt="logo tripadvisor" />
-          <nav>
-            <a href="#"><i class="icon-plus_c"></i><span>Publier</span></a>
-            <a href="#"><i class="icon-heart"></i><span>Voyager</span></a>
-            <a href="#"><i class="icon-comments"></i><span>Messages</span></a>
-            <a href="#"><i class="icon-friend"></i><span>Profil</span></a>
-            <button class="btn-signup">S'inscrire</button>
-          </nav>
-        </div>
-      </div>
 
-      <div class="cover">
-        <div class="transparent-strip">
-          <div class="container">
-            <ul>
-              <li><a href="#">Europe</a></li>
-              <li><i class="icon-single_chevron_right"></i></li>
-              <li><a href="#">France</a></li>
-              <li><i class="icon-single_chevron_right"></i></li>
-              <li><a href="#">Île de France</a></li>
-              <li><i class="icon-single_chevron_right"></i></li>
-              <li><a href="#">Paris</a></li>
-              <li><i class="icon-caret_down"></i></li>
-            </ul>
-            <div><span>Visiter :</span><span>&nbspParis</span></div>
-          </div>
+    <div class="menu">
+      <a href="#"><i class="icon-hotels"></i><span>Hôtels</span></a>
+      <a href="#"><i class="icon-tickets"></i><span>Activités</span></a>
+      <a href="#"><i class="icon-flights"></i><span></span>Vols</a>
+      <a href="#"><i class="icon-restaurants"></i><span>Restaurants</span></a>
+      <a href="#">
+        <i class="icon-vacation_rentals"></i><span>Locations<br class="hidden-xs" />
+          vacances</span>
+      </a>
+      <a href="#"><i class="icon-cruises"></i><span>Croisières</span></a>
+      <a href="#"><i class="icon-more_horizontal"></i><span>Plus</span></a>
+    </div>
+  </header>
+
+  <main class="container">
+    <aside class="aside-left">
+      <section>
+        <img src="./assets/img/avatar.png" alt="avatar" />
+        <h3>Débloquez le meilleur de TripAdvisor</h3>
+        <ul>
+          <li>
+            <i class="icon-bubble_rating_bg"></i>
+            <p>
+              Enregistrez vos idées de voyages préférées et affichez-les sur
+              une carte
+            </p>
+          </li>
+          <li>
+            <i class="icon-bubble_rating_bg"></i>
+            <p>
+              Recevez des alertes de prix et des offres pour voyager à votre
+              manière
+            </p>
+          </li>
+          <li>
+            <i class="icon-bubble_rating_bg"></i>
+            <p>
+              Posez des questions et obtenez des réponses de la part de
+              voyageurs tels que vous
+            </p>
+          </li>
+        </ul>
+        <button>Inscrivez-vous</button>
+      </section>
+      <section>
+        <h3>Partagez vos conseils de voyage</h3>
+        <div>
+          <i class="icon-camera_fill"></i>
+          <p>Publiez des photos</p>
         </div>
-        <div class="title">
+        <div>
+          <i class="icon-pencil_paper"></i>
+          <p>Écrire un avis</p>
+        </div>
+      </section>
+    </aside>
+    <div>
+      <section class="city">
+        <h2>Paris, France</h2>
+        <p class="text overflow-hidden">
+          Déguster un pain au chocolat à la terrasse d'un café, se délasser
+          après une journée de balade sur les quais de la Seine, s'émerveiller
+          devant des lieux symboliques comme la Tour Eiffel ou l'Arc de
+          triomphe… Un séjour à Paris réussi conjugue activités et détente,
+          tout en prenant le temps de savourer un bon repas tout comme les
+          célèbres expositions du Louvre. Commencez par prendre des forces à
+          Notre-Dame, puis partez à la chasse aux bonnes affaires au marché
+          aux puces de Montreuil ou goûtez aux spécialités vendues au marché
+          biologique de Raspail et pour terminer votre journée en beauté,
+          couronnez le tout par un spectacle osé au Moulin Rouge.
+        </p>
+        <div class="btn-text-down">
+          <span>Afficher plus</span>
+          <i class="icon-caret_down"></i>
+        </div>
+        <div class="btn-text-up hidden">
+          <span>Afficher moins</span>
+          <i class="icon-caret_up"></i>
+        </div>
+      </section>
+      <section class="no-padding">
+        <div class="gallery">
+          <div></div>
+          <div></div>
+          <div></div>
           <div>
             <div>
-              <h1>Paris</h1>
-              <i class="icon-single_chevron_down"></i>
+              + 148
             </div>
-            <div><i class="icon-times"></i></div>
           </div>
         </div>
-      </div>
-
-      <div class="menu">
-        <a href="#"><i class="icon-hotels"></i><span>Hôtels</span></a>
-        <a href="#"><i class="icon-tickets"></i><span>Activités</span></a>
-        <a href="#"><i class="icon-flights"></i><span></span>Vols</a>
-        <a href="#"><i class="icon-restaurants"></i><span>Restaurants</span></a>
-        <a href="#">
-          <i class="icon-vacation_rentals"></i
-          ><span
-            >Locations<br class="hidden-xs" />
-            vacances</span
-          >
-        </a>
-        <a href="#"><i class="icon-cruises"></i><span>Croisières</span></a>
-        <a href="#"><i class="icon-more_horizontal"></i><span>Plus</span></a>
-      </div>
-    </header>
-
-    <main class="container">
-      <aside class="aside-left">
-        <section>
-          <img src="./assets/img/avatar.png" alt="avatar" />
-          <h3>Débloquez le meilleur de TripAdvisor</h3>
-          <ul>
-            <li>
-              <i class="icon-bubble_rating_bg"></i>
-              <p>
-                Enregistrez vos idées de voyages préférées et affichez-les sur
-                une carte
-              </p>
-            </li>
-            <li>
-              <i class="icon-bubble_rating_bg"></i>
-              <p>
-                Recevez des alertes de prix et des offres pour voyager à votre
-                manière
-              </p>
-            </li>
-            <li>
-              <i class="icon-bubble_rating_bg"></i>
-              <p>
-                Posez des questions et obtenez des réponses de la part de
-                voyageurs tels que vous
-              </p>
-            </li>
-          </ul>
-          <button>Inscrivez-vous</button>
-        </section>
-        <section>
-          <h3>Partagez vos conseils de voyage</h3>
+      </section>
+      <section class="best">
+        <h2>Découvrez le meilleur de Paris</h2>
+        <div class="titles">
+          <h3>Convient pour un dîner à Paris</h3>
+          <p>Tout afficher</p>
+        </div>
+        <div class="carousel">
           <div>
-            <i class="icon-camera_fill"></i>
-            <p>Publiez des photos</p>
+            <div class="favorite">
+              <i class="icon-heart"></i>
+            </div>
+            <img src="./assets/img/argent.jpg" alt="restaurant" />
+            <h4>Restaurant traditionnel Longchamp</h4>
+            <div class="rating">
+              <i class="icon-bubble_rating_full"></i><i class="icon-bubble_rating_full"></i><i
+                class="icon-bubble_rating_full"></i><i class="icon-bubble_rating_full"></i><i
+                class="icon-bubble_rating_full"></i>
+              <span>156 avis</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="favorite"><i class="icon-heart"></i></div>
+            <img src="./assets/img/bienvenue-au-bistrot.jpg" alt="restaurant" />
+            <h4>Bistrot parisien</h4>
+            <div class="rating">
+              <i class="icon-bubble_rating_full"></i><i class="icon-bubble_rating_full"></i><i
+                class="icon-bubble_rating_full"></i><i class="icon-bubble_rating_full"></i><i
+                class="icon-bubble_rating_half"></i>
+              <span>204 avis</span>
+            </div>
           </div>
           <div>
-            <i class="icon-pencil_paper"></i>
-            <p>Écrire un avis</p>
-          </div>
-        </section>
-      </aside>
-      <div>
-        <section class="city">
-          <h2>Paris, France</h2>
-          <p class="text overflow-hidden">
-            Déguster un pain au chocolat à la terrasse d'un café, se délasser
-            après une journée de balade sur les quais de la Seine, s'émerveiller
-            devant des lieux symboliques comme la Tour Eiffel ou l'Arc de
-            triomphe… Un séjour à Paris réussi conjugue activités et détente,
-            tout en prenant le temps de savourer un bon repas tout comme les
-            célèbres expositions du Louvre. Commencez par prendre des forces à
-            Notre-Dame, puis partez à la chasse aux bonnes affaires au marché
-            aux puces de Montreuil ou goûtez aux spécialités vendues au marché
-            biologique de Raspail et pour terminer votre journée en beauté,
-            couronnez le tout par un spectacle osé au Moulin Rouge.
-          </p>
-          <div class="btn-text-down">
-            <span>Afficher plus</span>
-            <i class="icon-caret_down"></i>
-          </div>
-          <div class="btn-text-up hidden">
-            <span>Afficher moins</span>
-            <i class="icon-caret_up"></i>
-          </div>
-        </section>
-        <section class="no-padding">
-          <div class="gallery">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div>
-              <div>
-                + 148
-              </div>
+            <div class="favorite"><i class="icon-heart"></i></div>
+            <img src="./assets/img/caption.jpg" alt="restaurant" />
+            <h4>Caption</h4>
+            <div class="rating">
+              <i class="icon-bubble_rating_full"></i><i class="icon-bubble_rating_full"></i><i
+                class="icon-bubble_rating_full"></i><i class="icon-bubble_rating_half"></i><i
+                class="icon-bubble_rating_empty"></i>
+              <span>45 avis</span>
             </div>
           </div>
-        </section>
-        <section class="best">
-          <h2>Découvrez le meilleur de Paris</h2>
-          <div class="titles">
-            <h3>Convient pour un dîner à Paris</h3>
-            <p>Tout afficher</p>
-          </div>
-          <div class="carousel">
-            <div>
-              <div class="favorite">
-                <i class="icon-heart"></i>
-              </div>
-              <img src="./assets/img/argent.jpg" alt="restaurant" />
-              <h4>Restaurant traditionnel Longchamp</h4>
-              <div class="rating">
-                <i class="icon-bubble_rating_full"></i
-                ><i class="icon-bubble_rating_full"></i
-                ><i class="icon-bubble_rating_full"></i
-                ><i class="icon-bubble_rating_full"></i
-                ><i class="icon-bubble_rating_full"></i>
-                <span>156 avis</span>
-              </div>
+          <div>
+            <div class="favorite"><i class="icon-heart"></i></div>
+            <img src="./assets/img/pigeon.jpg" alt="restaurant" />
+            <h4>Au pigeon qui vole</h4>
+            <div class="rating">
+              <i class="icon-bubble_rating_full"></i><i class="icon-bubble_rating_full"></i><i
+                class="icon-bubble_rating_full"></i><i class="icon-bubble_rating_full"></i><i
+                class="icon-bubble_rating_empty"></i>
+              <span>104 avis</span>
             </div>
+          </div>
+          <div>
+            <div class="favorite"><i class="icon-heart"></i></div>
+            <img src="./assets/img/piment-despelette.jpg" alt="restaurant" />
+            <h4>Le piment d'espelette</h4>
+            <div class="rating">
+              <i class="icon-bubble_rating_full"></i><i class="icon-bubble_rating_full"></i><i
+                class="icon-bubble_rating_full"></i><i class="icon-bubble_rating_full"></i><i
+                class="icon-bubble_rating_full"></i>
+              <span>245 avis</span>
+            </div>
+          </div>
+          <div>
+            <div class="favorite"><i class="icon-heart"></i></div>
+            <img src="./assets/img/frenchie.jpg" alt="restaurant" />
+            <h4>Frenchie cuisine</h4>
+            <div class="rating">
+              <i class="icon-bubble_rating_full"></i><i class="icon-bubble_rating_full"></i><i
+                class="icon-bubble_rating_full"></i><i class="icon-bubble_rating_full"></i><i
+                class="icon-bubble_rating_half"></i>
+              <span>88 avis</span>
+            </div>
+          </div>
+          <div>
+            <div class="favorite"><i class="icon-heart"></i></div>
+            <img src="./assets/img/bouchon-tupin.jpg" alt="restaurant" />
+            <h4>Bouchon tupin</h4>
+            <div class="rating">
+              <i class="icon-bubble_rating_full"></i><i class="icon-bubble_rating_full"></i><i
+                class="icon-bubble_rating_full"></i><i class="icon-bubble_rating_full"></i><i
+                class="icon-bubble_rating_empty"></i>
+              <span>140 avis</span>
+            </div>
+          </div>
+          <div>
+            <div class="favorite"><i class="icon-heart"></i></div>
+            <img src="./assets/img/verjus.jpg" alt="restaurant" />
+            <h4>Verjus</h4>
+            <div class="rating">
+              <i class="icon-bubble_rating_full"></i><i class="icon-bubble_rating_full"></i><i
+                class="icon-bubble_rating_full"></i><i class="icon-bubble_rating_full"></i><i
+                class="icon-bubble_rating_full"></i>
+              <span>237 avis</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <aside class="aside-right">
+      <section>
+        <h3>Explorez Paris</h3>
+        <img src="./assets/img/aside.jpg" alt="paris" />
+        <ul>
+          <li>Hébergements</li>
+          <li>Hôtels 5 étoiles</li>
+          <li>Hôtels familiaux</li>
+          <li>Hôtels romantiques</li>
+        </ul>
+        <ul>
+          <li>Activités</li>
+          <li>Cours de cuisine</li>
+          <li>Bars de jazz</li>
+          <li>Musées d'art</li>
+        </ul>
+        <ul>
+          <li>Quartiers à visiter</li>
+          <li>Saint-Germain-des-Prés</li>
+          <li>Le Marais</li>
+          <li>Montmartre</li>
+        </ul>
+      </section>
+    </aside>
+  </main>
+</body>
 
-            <div>
-              <div class="favorite"><i class="icon-heart"></i></div>
-              <img
-                src="./assets/img/bienvenue-au-bistrot.jpg"
-                alt="restaurant"
-              />
-              <h4>Bistrot parisien</h4>
-              <div class="rating">
-                <i class="icon-bubble_rating_full"></i
-                ><i class="icon-bubble_rating_full"></i
-                ><i class="icon-bubble_rating_full"></i
-                ><i class="icon-bubble_rating_full"></i
-                ><i class="icon-bubble_rating_half"></i>
-                <span>204 avis</span>
-              </div>
-            </div>
-            <div>
-              <div class="favorite"><i class="icon-heart"></i></div>
-              <img src="./assets/img/caption.jpg" alt="restaurant" />
-              <h4>Caption</h4>
-              <div class="rating">
-                <i class="icon-bubble_rating_full"></i
-                ><i class="icon-bubble_rating_full"></i
-                ><i class="icon-bubble_rating_full"></i
-                ><i class="icon-bubble_rating_half"></i
-                ><i class="icon-bubble_rating_empty"></i>
-                <span>45 avis</span>
-              </div>
-            </div>
-            <div>
-              <div class="favorite"><i class="icon-heart"></i></div>
-              <img src="./assets/img/pigeon.jpg" alt="restaurant" />
-              <h4>Au pigeon qui vole</h4>
-              <div class="rating">
-                <i class="icon-bubble_rating_full"></i
-                ><i class="icon-bubble_rating_full"></i
-                ><i class="icon-bubble_rating_full"></i
-                ><i class="icon-bubble_rating_full"></i
-                ><i class="icon-bubble_rating_empty"></i>
-                <span>104 avis</span>
-              </div>
-            </div>
-            <div>
-              <div class="favorite"><i class="icon-heart"></i></div>
-              <img src="./assets/img/piment-despelette.jpg" alt="restaurant" />
-              <h4>Le piment d'espelette</h4>
-              <div class="rating">
-                <i class="icon-bubble_rating_full"></i
-                ><i class="icon-bubble_rating_full"></i
-                ><i class="icon-bubble_rating_full"></i
-                ><i class="icon-bubble_rating_full"></i
-                ><i class="icon-bubble_rating_full"></i>
-                <span>245 avis</span>
-              </div>
-            </div>
-            <div>
-              <div class="favorite"><i class="icon-heart"></i></div>
-              <img src="./assets/img/frenchie.jpg" alt="restaurant" />
-              <h4>Frenchie cuisine</h4>
-              <div class="rating">
-                <i class="icon-bubble_rating_full"></i
-                ><i class="icon-bubble_rating_full"></i
-                ><i class="icon-bubble_rating_full"></i
-                ><i class="icon-bubble_rating_full"></i
-                ><i class="icon-bubble_rating_half"></i>
-                <span>88 avis</span>
-              </div>
-            </div>
-            <div>
-              <div class="favorite"><i class="icon-heart"></i></div>
-              <img src="./assets/img/bouchon-tupin.jpg" alt="restaurant" />
-              <h4>Bouchon tupin</h4>
-              <div class="rating">
-                <i class="icon-bubble_rating_full"></i
-                ><i class="icon-bubble_rating_full"></i
-                ><i class="icon-bubble_rating_full"></i
-                ><i class="icon-bubble_rating_full"></i
-                ><i class="icon-bubble_rating_empty"></i>
-                <span>140 avis</span>
-              </div>
-            </div>
-            <div>
-              <div class="favorite"><i class="icon-heart"></i></div>
-              <img src="./assets/img/verjus.jpg" alt="restaurant" />
-              <h4>Verjus</h4>
-              <div class="rating">
-                <i class="icon-bubble_rating_full"></i
-                ><i class="icon-bubble_rating_full"></i
-                ><i class="icon-bubble_rating_full"></i
-                ><i class="icon-bubble_rating_full"></i
-                ><i class="icon-bubble_rating_full"></i>
-                <span>237 avis</span>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-      <aside class="aside-right">
-        <section>
-          <h3>Explorez Paris</h3>
-          <img src="./assets/img/aside.jpg" alt="paris" />
-          <ul>
-            <li>Hébergements</li>
-            <li>Hôtels 5 étoiles</li>
-            <li>Hôtels familiaux</li>
-            <li>Hôtels romantiques</li>
-          </ul>
-          <ul>
-            <li>Activités</li>
-            <li>Cours de cuisine</li>
-            <li>Bars de jazz</li>
-            <li>Musées d'art</li>
-          </ul>
-          <ul>
-            <li>Quartiers à visiter</li>
-            <li>Saint-Germain-des-Prés</li>
-            <li>Le Marais</li>
-            <li>Montmartre</li>
-          </ul>
-        </section>
-      </aside>
-    </main>
-  </body>
 </html>
